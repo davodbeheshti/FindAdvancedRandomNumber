@@ -3,3 +3,6 @@ let submitBtn,
     firstStepInput,
     lastStepInput,
     output;
+document.addEventListener("DOMContentLoaded", () => {
+    
+})
