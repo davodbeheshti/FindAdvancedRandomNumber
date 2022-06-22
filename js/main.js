@@ -16,6 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 const getValueInputs = () => {}
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 
 
