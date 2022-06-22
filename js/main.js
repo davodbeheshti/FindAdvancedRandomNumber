@@ -2,7 +2,8 @@ let submitBtn,
     stopBtn,
     firstStepInput,
     lastStepInput,
-    output = 0;
+    output = 0,
+    stopOutput = 0;
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -11,8 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
     firstStepInput = document.querySelector('#firstStep');
     lastStepInput = document.querySelector('#lastStep');
     output = document.querySelector('#output');
+    stopOutput = document.querySelector('#stopOutput');
 
     submitBtn.addEventListener('click', getValueInputs);
+    stopBtn.addEventListener('click', getValueStopOutput);
 })
 
 function sleep(ms) {
@@ -24,10 +27,14 @@ const getValueInputs = () => {
     let lastInputValoue = +lastStepInput.value || 100;
 
     for (let i = firstInputValoue; i <= lastInputValoue; i++) {
-        sleep(i * 1).then(_ => {
-            output.innerHTML = i.toString();
+        sleep(i * 10).then(_ => {
+            output.innerHTML = i;
         })
     }
+}
+
+const getValueStopOutput = () => {
+    stopOutput.innerHTML = output.innerHTML;
 }
 
 
