@@ -2,7 +2,7 @@ let submitBtn,
     stopBtn,
     firstStepInput,
     lastStepInput,
-    output;
+    output = 0;
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -15,10 +15,19 @@ document.addEventListener("DOMContentLoaded", () => {
     submitBtn.addEventListener('click', getValueInputs);
 })
 
-const getValueInputs = () => {}
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+const getValueInputs = () => {
+    let firstInputValoue = +firstStepInput.value || 0;
+    let lastInputValoue = +lastStepInput.value || 100;
+
+    for (let i = firstInputValoue; i <= lastInputValoue; i++) {
+        sleep(i * 1).then(_ => {
+            output.innerHTML = i.toString();
+        })
+    }
+}
 
 
