@@ -1,50 +1,50 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-  </head>
 
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./packages/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./packages/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body>
+
+
     <div>
-      <div class="ms-3">
-        <div class="d-flex align-items-center mt-3">
-          <div>
-            <label for="firstStep">firstStep</label>
-            <input id="firstStep" type="number" class="form-control" />
-          </div>
-          <span class="mx-3">to</span>
-          <div>
-            <label for="lastStep">lastStep</label>
-            <input id="lastStep" type="number" class="form-control" />
-          </div>
+
+        <div class="ms-3">
+            <div class="d-flex align-items-center mt-3">
+                <div>
+                    <label for="firstStep">firstStep</label>
+                    <input id="firstStep" type="number" class="form-control" />
+                </div>
+                <span class="mx-3">to</span>
+                <div>
+                    <label for="lastStep">lastStep</label>
+                    <input id="lastStep" type="number" class="form-control" />
+                </div>
+            </div>
+            <div class="mt-3 mx-auto">
+                <button id="submit" class="btn btn-sm btn-primary">Submit</button>
+                <button id="stop" class="btn btn-sm btn-info">Stop</button>
+            </div>
+            <div class="mt-3">
+                <p id="output"></p>
+            </div>
+            <div class="mt-3">
+                <p id="stopOutput"></p>
+            </div>
         </div>
-        <div class="mt-3 mx-auto">
-          <button id="submit" class="btn btn-sm btn-primary">Submit</button>
-          <button id="stop" class="btn btn-sm btn-info">Stop</button>
-        </div>
-        <div class="mt-3">
-          <p id="output"></p>
-        </div>
-        <div class="mt-3">
-          <p id="stopOutput"></p>
-        </div>
-      </div>
+
     </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
 
-    <script src="./main.js"></script>
-  </body>
+    <script src="./packages/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
 </html>
