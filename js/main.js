@@ -3,6 +3,7 @@ let submitBtn,
     firstStepInput,
     lastStepInput,
     output = 0,
+    startCountNumber = false,
     stopOutput = 0;
 
 
@@ -25,12 +26,11 @@ function sleep(ms) {
 const getValueInputs = () => {
     let firstInputValoue = +firstStepInput.value || 0;
     let lastInputValoue = +lastStepInput.value || 100;
-
     for (let i = firstInputValoue; i <= lastInputValoue; i++) {
         sleep(i * 10).then(_ => {
             output.innerHTML = i;
         })
-    }
+    };
 }
 
 const getValueStopOutput = () => {
